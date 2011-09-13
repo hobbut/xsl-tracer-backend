@@ -145,8 +145,7 @@ public class JSONTraceListener implements TraceListenerEx3 {
         	return TYPE_XSL;
         }
     }
-    
-	@Override
+
 	public void trace(TracerEvent ev) {
 		ElemTemplateElement style = ev.m_styleNode;
 		Node source = ev.m_sourceNode;
@@ -188,7 +187,6 @@ public class JSONTraceListener implements TraceListenerEx3 {
 		}
 	}
 
-	@Override
 	public void traceEnd(TracerEvent ev) {
 		ElemTemplateElement style = ev.m_styleNode;
 		if (style.getXSLToken() == Constants.ELEMNAME_VARIABLE) {
@@ -203,7 +201,6 @@ public class JSONTraceListener implements TraceListenerEx3 {
     	}
 	}
 
-	@Override
 	public void generated(GenerateEvent ev) {
 		if (collectGenerated) {
 			switch (ev.m_eventtype) {
@@ -224,23 +221,19 @@ public class JSONTraceListener implements TraceListenerEx3 {
 		}
 	}
 	
-	
-	@Override
+
 	public void selected(SelectionEvent ev) throws TransformerException {
 		
 	}
 
-	@Override
 	public void selectEnd(EndSelectionEvent ev) throws TransformerException {
 
 	}
 
-	@Override
 	public void extension(ExtensionEvent ee) {
 
 	}
 
-	@Override
 	public void extensionEnd(ExtensionEvent ee) {
 
 	}
